@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static java.lang.String.*;
+import static java.lang.String.valueOf;
 
 public class Main {
     static ArrayList<String> list = new ArrayList<String>(10);
@@ -58,8 +58,8 @@ public class Main {
                 " with the next letter up from the list.");
         userInput = Character.toString(userInput.charAt(0)).toUpperCase() + userInput.substring(1); //Alex helped
         //the one underneath, I came up with it all by myself with programming I know
-        /*String i = valueOf(userInput.indexOf(0));
-        userInput = i.toUpperCase() + userInput.substring(1);*/
+        String i = valueOf(userInput.indexOf(0));
+        userInput = i.toUpperCase() + userInput.substring(1);
         list.add(userInput);
         displayList();
     }
