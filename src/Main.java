@@ -66,7 +66,7 @@ public class Main {
 
     public static void delete(Scanner scan) {
         int userInput = getRangedInt(scan, "Which array list value would you like to remove?" +
-                "[0-" + (list.size() - 1) + "]", 0, list.size());
+                "[0-" + (list.size() - 1) + "]", 0, list.size() - 1);
         list.remove(userInput);
         displayList();
     }
@@ -88,7 +88,7 @@ public class Main {
         System.out.println(prompt);
         do {
             input = scan.nextLine();
-            if (input.length() != 0) {
+            if (!input.isEmpty()) {
                 check = true;
             } else {
                 System.out.println("You have to enter something, try again.");
@@ -111,7 +111,6 @@ public class Main {
                 System.out.println(confirm);
                 check = true;
             } else if (input.equalsIgnoreCase("n")) {
-                confirm = false;
                 System.out.println(confirm);
                 check = true;
             } else {
